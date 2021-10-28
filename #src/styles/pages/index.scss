@@ -1,0 +1,226 @@
+/* --------------------------------------------------------------------------
+ * >>> sign up Page :
+ * -------------------------------------------------------------------------- */
+.logo {
+  margin-bottom: 20px;
+  @include md-up {
+    margin-bottom: 60px;
+  }
+}
+.sign-up__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.sign-up__window {
+  max-width: 576px;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+  border-radius: 12px;
+
+  @include md-up {
+    max-width: 576px;
+    padding: 60px 64px;
+  }
+}
+.window__title {
+  margin-bottom: 35px;
+  font-family: $secondaryFont;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+
+  @include md-up {
+    font-size: 32px;
+  }
+}
+.window__through-social {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 16px;
+  margin-bottom: 28px;
+
+  .social-link-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border: 1px solid #C7CED3;
+    border-radius: 4px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: $fastAnim;
+    font-weight: 600;
+    font-size: 14px;
+    color: #414141;
+
+
+    &:hover {
+      border: 1px solid #0777CF;
+    }
+    &:focus {
+      box-shadow: 0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #667988;
+    }
+
+    svg {
+      margin-right: 8px;
+      cursor: pointer;
+    }
+  }
+}
+.window__separator {
+  position: relative;
+  text-align: center;
+  margin-bottom: 28px;
+
+  span {
+    position: relative;
+    background: $white;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #546470;
+    z-index: 1;
+  }
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #D8E0E6;
+    z-index: 0;
+  }
+}
+
+.window__form {
+  margin-bottom: 28px;
+
+  .input-item {
+    width: 100%;
+    height: 48px;
+    padding-left: 12px;
+    border: 1px solid #81919D;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: $fastAnim;
+    color: #38424B;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #667988;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #667988;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #667988;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #667988;
+    }
+
+    &:hover {
+      border: 1px solid #738592;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #667988;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #38424B;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: #38424B;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: #38424B;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: #38424B;
+      }
+    }
+    &.error {
+      border: 1px solid #D73F3E;      
+    }
+  }
+  label.error {    
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #D73F3E;
+  }
+  .row-email {
+    padding-bottom: 16px;
+  }
+  .row-password {
+    padding-bottom: 28px;
+  }
+  .submit-btn {
+    width: 100%;
+    height: 48px;
+    background: #0777CF;
+    border-radius: 4px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: $fastAnim;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: $white;
+
+
+    &:hover {
+      background: #348FD7;
+    }
+    &:focus {
+      box-shadow: 0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #667988;
+    }
+  }
+  p {
+    padding-top: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #546470;
+  }
+}
+.window__login {
+  line-height: 24px;
+  text-align: center;
+  color: #2C2C2C;
+  margin-bottom: 12px;
+
+  a {
+    text-decoration-line: underline;
+    color: #0777CF;
+    cursor: pointer;
+    transition: $fastAnim;
+
+    &:hover {
+      color: #348FD7;
+    }
+  }
+}
+.window__pp-tos {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #667988;
+  
+  a {
+    text-decoration-line: underline;
+    color: #667988;
+    cursor: pointer;
+    transition: $fastAnim;
+
+    &:hover {
+      color: #348FD7;
+    }
+  }
+}
